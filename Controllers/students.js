@@ -20,12 +20,6 @@ export function addStudentsData(data){
     .insertOne({data})
 }
 
-export function UpdateStudentData(id,updatedData){
-    return client
-    .db("Guvi").collection("students")
-    .findOneAndUpdate({_id:new ObjectId(id)},{$set:updatedData})
-}
-
 export function DeleteStudentData(id){
     return client
     .db("Guvi").collection("students")
